@@ -11,3 +11,4 @@ icons:
 https://devicon.dev/
 https://pictogrammers.com/library/mdil/icon/email/
 https://pictogrammers.com/library/mdi/icon/phone/
+https://pictogrammers.com/library/mdi/icon/open-in-new/

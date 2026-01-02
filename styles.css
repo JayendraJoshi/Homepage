@@ -1,3 +1,107 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
 body{
-    background-color:blueviolet;
+    min-height:100vh;
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p{
+    text-wrap:pretty;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* styles */
+body{
+    font-family:"Playfair";
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    position:relative;
+    
+}
+.profile-picture{
+   width:300px;
+   height:350px;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+   position:relative;
+}
+img{
+    width:20px;
+}
+footer{
+    background-color:rgba(8, 145, 178);
+}
+header{
+    display:flex;
+    justify-content:center;
+    position:relative;
+    background-color:white;
+
+}
+.skewed-shape{
+     transform-origin: top left;
+    background-color:rgba(8, 145, 178);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    flex:1;
+    position:absolute;
+    left:0;
+    top:0;
+    height:350px;
+    width:100%;
+    transform:skewY(-4deg);
+    z-index:1;
+}
+.profile-picture-container{
+    position:relative;
+    z-index:1;
+}
+.introduction{
+    flex: 0 1 500px;
+    align-self:center;
+    padding:1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    z-index:1;
+    background-color:white;
+}
+.introduction .social-links{
+    display:flex;
+    justify-content:flex-end;
+    gap:1rem;
+}
+.profile-picture-container .name{
+    position:absolute;
+    bottom:5px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:2rem;
+    width:100%;
+    text-align:center;
+}
+main{
+    padding:1rem;
+    background-color:white;
+    
+}
+main .card{
+    border:1px solid black;
 }
