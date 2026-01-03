@@ -102,14 +102,14 @@ main{
     background-color:white;
     display:flex;
     flex-direction:column;
-    margin:0 5.5rem;
 }
 main .cards-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,400px));
+    grid-template-columns:repeat(3,minmax(250px,350px));
     gap:1.5rem;
     justify-content:center;
-    
+    margin-inline:auto;
+    width:100%;
 }
 main h1{
     grid-column: 1/ -1;   
@@ -120,6 +120,7 @@ main .card{
     display:flex;
     flex-direction:column;
     aspect-ratio:1/1;
+    
 }
 
 .card img{
@@ -152,4 +153,15 @@ main .card{
 }
 .card .icon{
     width:20px;
+}
+
+@media (max-width: 1000px) {
+main .cards-container{
+  grid-template-columns:repeat(2,minmax(200px,350px));
+}
+}
+@media (max-width:500px){
+    main .cards-container{
+  grid-template-columns:minmax(200px,350px);
+}
 }
