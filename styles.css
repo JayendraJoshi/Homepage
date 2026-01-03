@@ -37,7 +37,7 @@ body{
     flex-direction:column;
     gap:2rem;
     position:relative;
-    padding:2.5rem;
+    
     
 }
 .profile-picture{
@@ -46,18 +46,20 @@ body{
     max-width: 100%; 
     
 }
-img{
-    width:20px;
-}
+
 footer{
     background-color:rgba(8, 145, 178);
 }
 header{
+    padding:2.5rem 2.5rem 0 2.5rem;
     display:flex;
     justify-content:center;
     position:relative;
     background-color:white;
 
+}
+header .icon{
+    width:25px;
 }
 .skewed-shape{
      transform-origin: top left;
@@ -78,21 +80,28 @@ header{
     flex-basis:400px;
     flex-shrink:0;
 }
-.introduction{
+.header-wrapper{
     flex: 0 1 100%;   
     z-index:1;
     display:flex;
     max-width:1400px;
+    
 }
-.introduction-text{
+.about-me-container{
     background-color:white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding:1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    
 }
-.introduction .social-links{
+.header-wrapper .social-links{
     display:flex;
     justify-content:flex-end;
     gap:1rem;
+    margin-top:auto;
+    
 }
 .profile-picture-container .name{
     position:absolute;
@@ -107,8 +116,9 @@ main{
     background-color:white;
     display:flex;
     flex-direction:column;
+    padding:0 2.5rem;
 }
-main .cards-container{
+main .main-wrapper{
     display:grid;
     grid-template-columns:repeat(3,minmax(250px,1fr));
     gap:1.5rem;
@@ -160,12 +170,61 @@ main .card{
 .card .icon{
     width:20px;
 }
+footer{
+    width:100%;
+    padding: 2.5rem;
+}
+.footer-wrapper{
+    max-width:1400px;
+    display:flex;
+    gap:1rem;
+    margin-inline:auto;
+}
+footer .footer-text{
+    flex-basis:50%;
+    display:flex;
+    flex-direction:column;
+}
+.footer-text > p:first-of-type{
+    margin-bottom:20px;
+}
+.footer-text > p:nth-of-type(2){
+    margin-bottom:20px;
+}
+footer img{
+   flex-basis:50%;
+   object-fit:cover;
+   min-width:0px;
+}
+footer .icon{
+    width:25px;
+  height:25px;     
+  object-fit:contain;
+  flex:0 0 auto; 
+}
+footer p{
+    font-size: 1.2rem;
+}
+footer .icon-container{
+    display:flex;
+    gap:1rem;
+     
+}
+.contact-number-container,.contact-mail-container{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+}
+
+.contact-mail-container{
+    margin-bottom:20px;
+}
 
 @media (max-width: 1000px) {
-main .cards-container{
+main .main-wrapper{
   grid-template-columns:repeat(2,minmax(200px,1fr));
 }
-.introduction{
+.header-wrapper{
     display:block;
     width: 100%;
 }
@@ -177,18 +236,50 @@ main .cards-container{
     width:250px;
     height:250px;
   }
-  .introduction-text{
+  .about-me-container{
     margin-top:40px;
   }
   .profile-picture-container .name{
      top:0;
     left: calc(50% + 90px); 
     transform:none;
+    bottom: auto;
+}
+.about-me-container{
+    display:block;
 }
 }
 @media (max-width:500px){
-    main .cards-container{
+    .header-wrapper{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .profile-picture-container .name{
+        left: 50%;
+        transform: translateX(-50%);
+        top:80%;
+       
+    }
+    .profile-picture{
+        width:300px;
+        height:300px;
+    }
+    .profile-picture-container{
+        flex-basis:0;
+        object-fit:contain;
+    }
+    main .main-wrapper{
         grid-template-columns:minmax(200px,1fr);
+    }
+    .footer-wrapper{
+        flex-direction:column;
+    }
+    .footer-text{
+        text-align:center;
+    }
+    .contact-number-container,.contact-mail-container, .icon-container{
+    justify-content:center;
     }
 
 }
