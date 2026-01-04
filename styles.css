@@ -143,10 +143,8 @@ main .card{
     width:100%;
     display:flex;
     flex-direction:column;
-    aspect-ratio:1/1;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-    
-    
+    align-self:stretch;
 }
 
 .screenshot{
