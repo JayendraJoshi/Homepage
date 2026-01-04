@@ -1,6 +1,6 @@
 Sources:
 images:
-https://pixabay.com/de/photos/demn%c3%a4chst-ankommen-bekannt-zu-geben-2070393/
+https://pixabay.com/de/vectors/alphabet-buchstabe-buchstabe-j-7046586/
 https://pixabay.com/de/photos/laptop-pflanze-schreibtisch-4948841/
 
 fonts:
